@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!-- Compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!-- Minified JS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <title>Poyecto Final</title>
+</head>
+<body class="bg-white">
+    <div class="container bg-white" style="height: 100%; width: 100%;">
+        <div class="bg-light row">
+            <div class="col-6 py-3">
+                <div class="d-inline-block" id="logo">
+                    <img   onclick="location.href='index.html'" src="logo.png" alt="Logo" class="img-fluid">
+                </div>
+                <div class="d-none d-md-inline-block text-black h1" style="padding-left: 30px;">
+                    ISA BOUTIQUE
+                </div>
+            </div>
+            <div class="d-none d-md-block col-6 p-2">
+                <div class="row text-right">
+                    <form class="d-inline-block form-inline" style="border: solid;border-radius: 60px/20px " >
+                        <div class="input-group" >
+                            <div class="input-group-prepend" >
+                                <span class="input-group-text bg-light"  style="border-radius: 60px/50px">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" placeholder="Buscar" class="form-control" style="border-radius: 60px/20px" >
+                            </div>
+                        </div>
+                    </form>
+                    <div class="ml-3 text-right d-inline-block">
+                        <button class="btn btn-light" type="button" data-toggle="modal" data-target="#modalLogin">
+                            Inicio de sesión
+                        </button>
+                        |
+                        <button style="align-items: centerda;" class="btn btn-light" type="button" data-toggle="modal" data-target="#modalRegistro">
+                            Registrarse
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <ul class="list-group list-group-horizontal text-center">
+                        <li style="border-right: none;" onclick="location.href='productos.html'"  class="list-group-item list-group-item-action">Productos</li>
+                        <li style="border-right: none;" onclick="location.href='ofertas.html'"  class="list-group-item list-group-item-action">Ofertas</li>
+                        <li style="border-left: none;" onclick="location.href='#'" class="list-group-item list-group-item-action">Mas vendidos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-block d-md-none col-6 p-2 text-right" >
+                <button class="btn btn-light" id="search_button" style="border-radius: 60px/20px" onclick="">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        <div  class="container d-none d-sm-none d-md-block">
+            <div class="h3" style="width: 100%;">
+                Carrito
+            </div>
+            <div class="containt" style="height: 500px;width: 100%; overflow-y: auto; ">
+                <div id="categoria" class="col-12 categoria" style="width: 100%;">
+                    <div class="categoria-items  ">
+                        <ul >
+                            <div style="padding-bottom: 10px;padding-top: 10px; width: 100%;" class="col-12">
+                                <div class="row" style="text-align: center;">
+                                    <img  class="col-2" src="https://picsum.photos/150/250" alt="">
+                                    <h4 class="col-2">nombre producto</h6>
+                                    <h4 class="col-2">6</h6>
+                                    <h4 class="col-2">8</h6>
+                                    <h4 class="col-2">250</h6>
+                                    <button class="col-2" >X</button>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 10px;padding-top: 10px;width: 100%;" class="col-12">
+                                <div class="row" style="text-align: center;">
+                                    <img  class="col-2" src="https://picsum.photos/150/250" alt="">
+                                    <h4 class="col-2">nombre producto</h6>
+                                    <h4 class="col-2">6</h6>
+                                    <h4 class="col-2">8</h6>
+                                    <h4 class="col-2">250</h6>
+                                    <button class="col-2" >X</button>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 10px;padding-top: 10px;width: 100%;" class="col-12">
+                                <div class="row" style="text-align: center;">
+                                    <img  class="col-2" src="https://picsum.photos/150/250" alt="">
+                                    <h4 class="col-2">nombre producto</h6>
+                                    <h4 class="col-2">6</h6>
+                                    <h4 class="col-2">8</h6>
+                                    <h4 class="col-2">250</h6>
+                                    <button class="col-2" >X</button>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 10px;padding-top: 10px;width: 100%;" class="col-12">
+                                <div class="row" style="text-align: center;">
+                                    <img  class="col-2" src="https://picsum.photos/150/250" alt="">
+                                    <h4 class="col-2">nombre producto</h6>
+                                    <h4 class="col-2">6</h6>
+                                    <h4 class="col-2">8</h6>
+                                    <h4 class="col-2">250</h6>
+                                    <button class="col-2" >X</button>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 10px;padding-top: 10px;width: 100%;" class="col-12">
+                                <div class="row" style="text-align: center;">
+                                    <img  class="col-2" src="https://picsum.photos/150/250" alt="">
+                                    <h4 class="col-2">nombre producto</h6>
+                                    <h4 class="col-2">6</h6>
+                                    <h4 class="col-2">8</h6>
+                                    <h4 class="col-2">250</h6>
+                                    <button class="col-2" >X</button>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 10px;padding-top: 10px;width: 100%;" class="col-12">
+                                <div class="row" style="text-align: center;">
+                                    <img  class="col-2" src="https://picsum.photos/150/250" alt="">
+                                    <h4 class="col-2">nombre producto</h6>
+                                    <h4 class="col-2">6</h6>
+                                    <h4 class="col-2">8</h6>
+                                    <h4 class="col-2">250</h6>
+                                    <button class="col-2" >X</button>
+                                </div>
+                            </div>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 100px;">
+                <div class="col-8" style="padding-top: 10px;">
+                    <p>
+                        <h3>Misma dirección</h3>
+                        <input type="checkbox" name="mismadir" value="misma">
+                    </p>
+                </div>
+                <div class="col-4" style="text-align: center;">
+                    <h3>subtotal</h3><br>
+                    350
+                </div>
+            </div>
+            <div class="row" style="padding-top: 100px;">
+                <div class="col-2" style="padding-top: 10px;">
+                    <p>
+                        <button style="border: none;">
+                            <li style="border-left: none;" onclick="location.href='direccion.html'" class="list-group-item list-group-item-action">Agregar dirección</li>
+                        </button>
+                    </p>
+                </div>
+                <div class="col-3">
+
+                </div>
+                <div class="col-2" style="padding-top: 10px;">
+                    <p>
+                        <button style="border: none;" class="bg-light">
+                            <li style="border-left: none;" onclick="location.href='index.html'" class="list-group-item list-group-item-action">Seguir comprando</li>
+                        </button>
+                    </p>
+                </div>
+                <div class="col-3">
+
+                </div>
+                <div class="col-2" style="text-align: center;">
+                    <button style="border: none;">
+                        <li style="border-left: none;" data-toggle="modal" data-target="#modalcompra"class="list-group-item list-group-item-action">Realizar compra</li>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-light row text-black d-none d-sm-none d-md-block " style="height: 100px;">
+                <div class="row">
+                    <div class="col-2">
+    
+                    </div>
+                    <div class="col-6" id="redes1" >
+                        <a href="" class="text-black" >
+                            <i class="fab fa-facebook"></i></a>
+                        <a href="" class="text-black">
+                            <i class="fab fa-instagram-square"></i>
+                        </a>
+                        <a href="" class="text-black">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                    <div class="col-3 text-left" >
+                        <h3><a href="">Contáctanos</a></h3>
+                    </div>
+                </div>
+
+        </div>
+        </div>
+        <div class="row justify-content-end collapse" id="menu_inicio" style="position: right;">
+            <div class="col-4 bg-light " id="redes2">
+                <div>
+                    <a href="" class="text-black" data-toggle="modal" data-target="#modalLogin">
+                        Inicio de sesion
+                </div>
+                <div>
+                    <a href="" class="text-black" data-toggle="modal" data-target="#modalRegistro">
+                        Registrarse
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-end collapse" id="menu_footer" style="position: right;">
+            <div class="col-4 bg-light">
+                <div>
+                    <a href="" class="text-black" data-toggle="modal" data-target="#modalLogin">Iniciar sesión</a>
+                </div>
+                <div>
+                    <a href="" class="text-black" data-toggle="modal" data-target="#modalRegistro">Registrarse</a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end collapse" id="menu_redes" style="position: right;">
+            <div class="col-4 bg-light " id="redes2">
+                <div>
+                    <a href="" class="text-black" >
+                        <i class="fab fa-facebook"></i></a>
+                </div>
+                <div>
+                    <a href="" class="text-black">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="" class="text-black">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%;" class="d-none d-sm-block d-md-none">
+            <div class="bg-succes row" sty>
+                <div class="h3">
+                    Carrito
+                </div>
+                <div id="categoria" class="col-12 categoria">
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="col3">
+                            <img src="https://picsum.photos/150/250" alt="">
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col3" >
+                            <h4>Nombre</h4><br>
+                            <h4>Precio</h4><br>
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-2"><br><br><br>
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="col3">
+                            <img src="https://picsum.photos/150/250" alt="">
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col3" >
+                            <h4>Nombre</h4><br>
+                            <h4>Precio</h4><br>
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-2"><br><br><br>
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="col3">
+                            <img src="https://picsum.photos/150/250" alt="">
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col3" >
+                            <h4>Nombre</h4><br>
+                            <h4>Precio</h4><br>
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-2"><br><br><br>
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="col3">
+                            <img src="https://picsum.photos/150/250" alt="">
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col3" >
+                            <h4>Nombre</h4><br>
+                            <h4>Precio</h4><br>
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-2"><br><br><br>
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="col3">
+                            <img src="https://picsum.photos/150/250" alt="">
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col3" >
+                            <h4>Nombre</h4><br>
+                            <h4>Precio</h4><br>
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-2"><br><br><br>
+                            <button>X</button>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+                        <div class="col3">
+                            <img src="https://picsum.photos/150/250" alt="">
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col3" >
+                            <h4>Nombre</h4><br>
+                            <h4>Precio</h4><br>
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-2"><br><br><br>
+                            <button>X</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6" style="align-items: center;">
+                            <input style=" font-size: 8em;" type="checkbox" name="mismadir" value="misma">
+                        </div>
+                        <div class="col-6">
+                            <h4 style="padding-left: 10px;">Misma dirección</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">  
+                    <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+                        <div class="col-6" style="align-items: center;">
+                            <button style="border: none; align-items: center;">
+                                <li style="border-left: none;" onclick="location.href='index.html'" class="list-group-item list-group-item-action">Seguir comprando</li>
+                            </button>
+                        </div>
+                        <div class="col-6" style="align-items: center;">
+                            <button style="border: none; align-items: center;">
+                                <li style="border-left: none;" data-toggle="modal" data-target="#modalcompra" class="list-group-item list-group-item-action">Realizar compra</li>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="bg-light row text-white d-md-none text-center">
+            <div class="col-3">
+                <button class="btn btn-light footer_phone"  onclick="location.href='carrito.html'">
+                    <i class="fas fa-ticket-alt"></i>
+                </button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light footer_phone" onclick="location.href='productos.html'">
+                    <i class="fas fa-tv"></i>
+                </button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light footer_phone">
+                    <button class="btn btn-light footer_phone" data-toggle="collapse" data-target="#menu_redes">
+                    <i class="fas fa-theater-masks"></i>
+                </button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-light footer_phone" data-toggle="collapse" data-target="#menu_inicio">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal compra-->
+    <div class="modal fade" id="modalLogin" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title ">Iniciar sesión </h3>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="login_email">Correo</label>
+                            <input type="text" id="login_email" name="login_email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="login_pass">Contraseña</label>
+                            <input type="password" id="login_pass" name="login_pass" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">
+                        Aceptar
+                    </button>
+                    <button class="btn btn-secondary" data-dismiss="modal">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de login -->
+    <div class="modal fade" id="modalcompra" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title ">Confirmar compra </h3>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>Su compra ha realizado con exito</h3>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">
+                        Continuar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de registro -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Registro</h3>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="name">Nombre (s)</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="lastname">Apellidos</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="password2">Confirmar contraseña</label>
+                                <input type="password2" class="form-control" id="lastname2" name="lastname2">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">
+                        Aceptar
+                    </button>
+                    <button class="btn btn-secondary" data-dismiss="modal">
+                        Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
