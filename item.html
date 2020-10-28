@@ -34,12 +34,12 @@
                             </div>
                         </div>
                     </form>
-                    <div class="ml-3 text-right d-inline-block">
-                        <button class="btn btn-light" type="button" data-toggle="modal" data-target="#modalLogin">
+                    <div class="ml-3 text-right d-inline-block d-sm-none d-md-block">
+                        <button class=" d-sm-block d-md-none btn btn-light" type="button" data-toggle="modal" data-target="#modalLogin">
                             Inicio de sesión
                         </button>
                         |
-                        <button style="align-items: centerda;" class="btn btn-light" type="button" data-toggle="modal" data-target="#modalRegistro">
+                        <button style="align-items: centerda;" class="d-sm-block d-md-none btn btn-light" type="button" data-toggle="modal" data-target="#modalRegistro">
                             Registrarse
                         </button>
                     </div>
@@ -66,10 +66,30 @@
                         </p>
                     </div>
                     <div class="col-4 bg-light" style="text-align:center;">
-                        <div class="container" style="margin:0px auto;">
-                            <h4 class="page-header">Cantidad</h4>
+                        <div class="container d-none d-sm-none d-md-block" style="margin:0px auto;">
+                            <h4 class="page-heade">Cantidad</h4>
                             <div class="row">
                               <div class="col-sm-12">
+                                <select class="form-control">
+                                  <option value="1">1 unidad</option>
+                                  <option value="2">2 unidad</option>
+                                  <option value="3">3 unidad</option>
+                                  <option value="4">4 unidad</option>
+                                  <option value="5">5 unidad</option>
+                                  <option value="6">6 unidad</option>
+                                  <option value="7">7 unidad</option>
+                                  <option value="8">8 unidad</option>
+                                  <option value="9">9 unidad</option>
+                                  <option value="10">10 unidad</option>
+                                </select>
+                              </div>
+                            </div>
+                            <br />
+                          </div>
+                          <div class="container d-sm-block d-md-none" style="margin:0px auto;">
+                            <div class="row">
+                                <h6 class="col-6 page-heade">Cantidad</h6>
+                              <div class="col-sm-6">
                                 <select class="form-control">
                                   <option value="1">1 unidad</option>
                                   <option value="2">2 unidad</option>
@@ -141,11 +161,11 @@
             <div class="col-4 bg-light " id="redes2">
                 <div>
                     <a href="" class="text-black" data-toggle="modal" data-target="#modalLogin">
-                        Inicio de sesion
+                        <h5>Inicio de sesion</h5>
                 </div>
                 <div>
                     <a href="" class="text-black" data-toggle="modal" data-target="#modalRegistro">
-                        Registrarse
+                        <h5>Registrarse</h5>
                     </a>
                 </div>
             </div>
@@ -154,23 +174,23 @@
         <div class="bg-light row text-white d-md-none text-center">
             <div class="col-3">
                 <button class="btn btn-light footer_phone" onclick="location.href='carrito.html'">
-                    <i style="font-size: 0.5em;" class="fas fa-ticket-alt"></i>
+                    <i style="font-size: 0.2em;" class="fas fa-ticket-alt"></i>
                 </button>
             </div>
             <div class="col-3">
                 <button class="btn btn-light footer_phone" onclick="location.href='productos.html'">
-                    <i style="font-size: 0.5em;"  class="fas fa-tv"></i>
+                    <i style="font-size: 0.2em;"  class="fas fa-tv"></i>
                 </button>
             </div>
             <div class="col-3">
                 <button class="btn btn-light footer_phone">
                     <button class="btn btn-light footer_phone" data-toggle="collapse" data-target="#menu_redes">
-                    <i  style="font-size: 0.5em;" class="fas fa-theater-masks"></i>
+                    <i  style="font-size: 0.2em;" class="fas fa-theater-masks"></i>
                 </button>
             </div>
             <div class="col-3">
                 <button class="btn btn-light footer_phone" data-toggle="collapse" data-target="#menu_inicio">
-                    <i  style="font-size: 0.5em;" class="fas fa-bars"></i>
+                    <i  style="font-size: 0.2em;" class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
